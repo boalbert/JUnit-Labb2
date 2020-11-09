@@ -1,6 +1,4 @@
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.NullSource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -32,8 +30,21 @@ public class TextProcessorTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"hello", "are", "you", "there"})
-    void checkIfReturnStringReversedInputDoesNotReturnNull(String valuesource){
-        assertNotNull(textProcessor.returnStringReversed(valuesource));
+    @ValueSource(strings = {"this", "should", "not", "be", "null"})
+    void checkIfReturnStringReversedInputDoesNotReturnNull(String valueSource){
+        assertNotNull(textProcessor.returnStringReversed(valueSource));
+        System.out.println("Reversed String: " + textProcessor.returnStringReversed(valueSource));
+    }
+
+    @BeforeEach
+    @Test
+    void displayBeforeEach() {
+        System.out.print("This will run before each test: ");
+    }
+
+    @AfterEach
+    @Test
+    void displayAfterEach() {
+        System.out.print("... and this will run after each test.");
     }
 }
