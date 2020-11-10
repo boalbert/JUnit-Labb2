@@ -21,14 +21,6 @@ TextProcessorTest.java innehåller (m.m.)
 pom.xml
 
 ```xml
-  <dependencies>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.4.0</version>
-      <scope>test</scope>
-    </dependency>
-
 // Inkluderas för att köra @ParameterizedTest
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -37,5 +29,12 @@ pom.xml
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+// För att kunna köra 'mvn test' kommando
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.0.0-M5</version>
+    </plugin>
 ```
 
