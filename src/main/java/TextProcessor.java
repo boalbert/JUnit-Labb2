@@ -1,10 +1,7 @@
-public class TextProcessor {
-
-    final static TextProcessor textProcessor = new TextProcessor();
+class TextProcessor {
 
     public static void main(String[] args) {
 
-        System.out.println(textProcessor.returnStringReversed("reversed"));
     }
 
     public String returnStringCapitalized(String string) {
