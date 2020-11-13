@@ -63,7 +63,7 @@ class CalculatorTest {
     @ValueSource(ints = {2, 3, 4, 5, 6, 7, 8, 9, 10})
     void testIfNumberTurnsBiggerWhenWeMultiPlyByItself(int n){
 
-        Assertions.assertTrue(calculator.multiply(n,n) > n);
+        assertTrue(calculator.multiply(n,n) > n);
 
     }
 
