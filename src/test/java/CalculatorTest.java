@@ -55,6 +55,7 @@ class CalculatorTest {
     void testMultiply() {
 
         assertEquals(10,calculator.multiply(2,5));
+        assertFalse(15 == calculator.multiply(2,5));
 
     }
 
